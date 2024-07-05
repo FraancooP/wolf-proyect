@@ -5,17 +5,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 /*Textos Generales*/
+a{
+    text-decoration: none;
+    color: white;
+}
 strong{
-    color: brown;
-}
-p{
-
-}
-h1{
-
-}
-h2{
-
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    text-decoration: none;
 }
 /*Textos Generales FIN*/
 /*body y header general*/
@@ -23,6 +20,7 @@ body{
     background-color: aliceblue;
 }
 header{
+    width: 100%;
     background-color: #333;
     color: white;
     padding: 10px 0;
@@ -81,9 +79,13 @@ header{
     display: block;
 }
 /*FIN BARRA ESCRIOTRIO*/
+/*Vista del main en general(Seria la parte central debajo de barra)*/
 main{
-    padding: 20px;
+    width: 100%;
+    padding: 0;
+
 }
+/*Fin de pagina*/
 footer{
     background-color: #333;
     color: white;
@@ -91,11 +93,202 @@ footer{
     padding: 10px 0;
     opacity: 0.9;
 }
+/*Contenedor-main*/
+.contenedor-main{
+    font-size: 45px;
+    background-color: #af1f1f;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra de texto */
+    color: #ffffff; /* Color del texto */
+    
+}
+.separacion-2{
+    font-size: 25px;
+    background-color: #af1f1f;
+    color: #99bb64; /* Color del texto */
+}
+
+/*MAIN DE PAGINA INICIAL (WOLF)*/
+/*Carrousel de imagenes.*/
+.carrousel-wolf{
+    width: 1000px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+.carrousel-wolf ul{
+    display: flex;
+    pad: 0;
+    width: 300%;
+    animation: slide-desktop 20s infinite alternate ease-in-out;
+}
+.carrousel-wolf li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.carrousel-wolf img{
+    width: 100%;
+}
+.ver-mas{
+    color: rgb(80, 61, 11);
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    counter-reset: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+.ver-mas:hover{
+    color: #555;
+}
+@keyframes slide-desktop {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(0);}
+    20% {transform: translateX(-8%); }
+    30% {transform: translateX(-8%);}
+    40% {transform: translateX(-25%);}
+    50% {transform: translateX(-25%);}
+    60% {transform: translateX(-42%);}
+    70% {transform: translateX(-42%);}
+    80% {transform: translateX(-57%);}
+    90% {transform: translateX(-57%);}
+    100% {transform: translateX(-73%);}
+}
+/*FIN Carrousel de imagenes.*/
+/*Imagenes pasables de abajo.*/
+.contenedores-imagenes {
+    justify-content: center;
+    display: flex;
+    gap: 80px;
+}
+.cuadro-imagen{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+.deslizado1 img {
+    width: 100%;
+    height: 100%;
+}
+.deslizado2 img {
+    width: 100%;
+    height: 100%;
+}
+.deslizado3 img {
+    width: 100%;
+    height: 100%;
+}
+.prev1, .next1, .prev2, .next2 ,.prev3, .next3 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  .next1, .next2, .next3 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev1:hover, .next1:hover,.prev2:hover, .next2:hover,.prev3:hover, .next3:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .numbertext {
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .text {
+    color: #d1c5c5;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+/*FIN Imagenes pasables de abajo.*/
+.barra-filtros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 100px;
+}
+.boton-filtro{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.boton-filtro:hover{
+    background-color: #333;
+    color: white;
+}
+.grupo{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.grupo p{
+    margin: 0;
+}
+.grupo a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+.grupo img{
+    display: block;
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.grupo img:last-child {
+    margin-right: 0;
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Esto es interfaz en modo celular, falta trabajar.*/
 @media (max-width: 768px){
     .desktop-nav{
         display: none;

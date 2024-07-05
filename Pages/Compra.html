@@ -80,7 +80,7 @@
             // Aquí deberías tener lógica para cargar los datos del producto según el parámetro recibido
             if (producto === 'buzo1') {
                 document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Azul";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Buzo 1...";
+                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios.";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf1.jpg";
             } else if (producto === 'buzo2') {
                 document.getElementById("nombre-articulo").textContent = "Buzo 2";
@@ -131,7 +131,7 @@
         function abrirWhatsApp() {
             var producto = getParameterByName('producto');
             var productoNombre = document.getElementById("nombre-articulo").textContent;
-            var whatsappUrl = "https://wa.me/5491234567890?text=" + encodeURIComponent("Holaa, estoy muy interesado en el siguiente artículo: " + productoNombre);
+            var whatsappUrl = "https://wa.me/5493547316058?text=" + encodeURIComponent("Holaa, estoy muy interesado en el siguiente artículo: " + productoNombre);
             window.location.href = whatsappUrl;
         }
         // Cargar la información del producto al cargar la página

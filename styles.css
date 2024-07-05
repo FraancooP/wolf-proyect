@@ -4,10 +4,26 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+    font-family: 'MiFuente';
+    src: url('Images/fonts/font-wolf.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MiFuente1';
+    src: url('Images/fonts/font-wolf1.ttf') format('opentype');
+}
+.texto-personalizado {
+    font-family: 'MiFuente', sans-serif;
+    font-size: 100px;
+}
+.texto-personalizado1 {
+    font-family: 'MiFuente1', sans-serif;
+    font-size: 45px;
+}
 /*Textos Generales*/
 a{
     text-decoration: none;
-    color: white;
+    color: white;   
 }
 strong{
     color: rgb(255, 255, 255);
@@ -99,12 +115,18 @@ footer{
     background-color: #af1f1f;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra de texto */
     color: #ffffff; /* Color del texto */
+    background-image: url(Images/images-wolf/nosotros.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 650px;
     
 }
 .separacion-2{
     font-size: 25px;
-    background-color: #af1f1f;
-    color: #99bb64; /* Color del texto */
+    background-color: #581b1b;
+    color: #ffffff; /* Color del texto */
 }
 
 /*MAIN DE PAGINA INICIAL (WOLF)*/
@@ -271,6 +293,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    font-size: 45px;
 }
 .detalle-articulo {
     flex: 1;
@@ -308,6 +331,24 @@ footer{
 .talla1.selected, .talla2.selected, .talla3.selected {
     background-color: #333;
     color: white;
+}
+.boton-interesado{
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 10px 2px; /* Margen alrededor */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s;
+}
+.boton-interesado:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Agrandar un poco al pasar el ratón */
 }
 /*Esto es interfaz en modo celular, falta trabajar.*/
 @media (max-width: 768px){

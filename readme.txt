@@ -1,0 +1,1 @@
+Este proyecto esta dedicado para realizar a pagina de compra de ropa mediante internet.

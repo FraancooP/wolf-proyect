@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Textos Generales*/
+strong{
+    color: brown;
+}
+p{
+
+}
+h1{
+
+}
+h2{
+
+}
+/*Textos Generales FIN*/
+/*body y header general*/
+body{
+    background-color: aliceblue;
+}
+header{
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    opacity: 0.9;
+}
+/*Barra general*/
+.barra{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Barra vista en escritorio*/
+.mobile-nav{
+    display: none;
+}
+.desktop-nav ul{
+    list-style-type: none;
+    display: flex;
+}
+.desktop-nav ul li{
+    position: relative;
+    margin-right: 20px;
+}
+.desktop-nav ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 10px;
+    display: block;
+}
+.desktop-nav ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+.desktop-nav ul ul li{
+    margin-bottom: 5px;
+}
+.desktop-nav ul ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+.desktop-nav ul ul li a:hover{
+    background-color: #555;
+}
+.desktop-nav ul li:hover > ul{
+    display: block;
+}
+/*FIN BARRA ESCRIOTRIO*/
+main{
+    padding: 20px;
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.9;
+}
+
+
+
+
+
+@media (max-width: 768px){
+    .desktop-nav{
+        display: none;
+    }
+
+}

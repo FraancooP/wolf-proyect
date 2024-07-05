@@ -309,24 +309,6 @@ footer{
     background-color: #333;
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Esto es interfaz en modo celular, falta trabajar.*/
 @media (max-width: 768px){
     .desktop-nav{

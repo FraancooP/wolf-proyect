@@ -45,22 +45,32 @@ header{
 /*Barra general*/
 .barra{
     width: 80%;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-/*Barra vista en escritorio*/
+.barra .logo{
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.barra .menu{
+    align-items: center;
+    margin-right: auto;
+}
+.barra img{
+    max-width: 100px;
+    height: auto;
+}
 .mobile-nav{
     display: none;
 }
 .desktop-nav ul{
     list-style-type: none;
     display: flex;
+
 }
 .desktop-nav ul li{
     position: relative;
-    margin-right: 20px;
+    margin-right: 200px;
 }
 .desktop-nav ul li a{
     color: white;
@@ -122,6 +132,9 @@ footer{
     width: auto;
     height: 650px;
     
+}
+.contenedor-main img{
+    max-width: 615px;
 }
 .separacion-2{
     font-size: 25px;
@@ -314,7 +327,7 @@ footer{
     margin-right: 10px;
     margin-bottom: 10px;
 }
-.talla1, .talla2, .talla3 {
+.talla1, .talla2, .talla3 ,.talla4, .talla5, .talla6, .talla7 {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 10px;
@@ -324,15 +337,35 @@ footer{
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
 }
-.talla1:hover, .talla2:hover, .talla3:hover {
+.talla1:hover, .talla2:hover, .talla3:hover ,.talla4:hover, .talla5:hover, .talla6:hover, .talla7:hover{
     background-color: #333;
     color: white;
 }
-.talla1.selected, .talla2.selected, .talla3.selected {
+.talla1.selected, .talla2.selected, .talla3.selected, .talla4.selected, .talla5.selected, .talla6.selected, .talla7.selected {
     background-color: #333;
     color: white;
 }
-.boton-interesado{
+.seleccion-compra{
+    background-color: #a6dd26;
+    color: #444;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.panel{
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.active, .seleccion-compra:hover {
+    background-color: #ccc;
+  }
+.boton-whatsapp, .boton-tarjeta, .boton-transferencia{
     background-color: #4CAF50; /* Color de fondo */
     border: none; /* Sin borde */
     color: white; /* Color del texto */
@@ -346,9 +379,51 @@ footer{
     border-radius: 12px; /* Bordes redondeados */
     transition: background-color 0.3s, transform 0.3s;
 }
-.boton-interesado:hover {
+.boton-whatsapp:hover, .boton-tarjeta:hover, .boton-transferencia:hover {
     background-color: #45a049; /* Color de fondo al pasar el ratón */
     transform: scale(1.05); /* Agrandar un poco al pasar el ratón */
+}
+.contactarnos{
+    display: flex;
+    background-color: #333;
+    align-items: center;
+}
+.contactarnos p{
+    font-size: 50;
+}
+.contactarnos img{
+    max-width: 800px;
+    height: auto;
+}
+.contactarnos .medios{
+    font-size: 35px;
+    color: white;
+}
+.contactarnos .medios img{
+    max-width: 50px;
+    height: auto;
+}
+.nosotros-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+}
+.nostros-text {
+    flex: 1;
+}
+.nosotros-1img{
+    margin-left: auto;
+}
+img{
+    max-width: 700px;
+}
+.ubicarnos{
+    display: flex;
+    background-color: #333;
 }
 /*Esto es interfaz en modo celular, falta trabajar.*/
 @media (max-width: 768px){

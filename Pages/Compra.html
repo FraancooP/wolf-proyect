@@ -47,14 +47,22 @@
                     <div class="talla1" onclick="seleccionarTalla(this)">S</div>
                     <div class="talla2" onclick="seleccionarTalla(this)">M</div>
                     <div class="talla3" onclick="seleccionarTalla(this)">L</div>
-                    <!-- Agrega más tallas según sea necesario -->
+                    <div class="talla5" onclick="seleccionarTalla(this)">X</div>
+                    <div class="talla6" onclick="seleccionarTalla(this)">XL</div>
+                    <div class="talla7" onclick="seleccionarTalla(this)">XXL</div>
                     <h3>Colores Disponibles</h3>
-                    <label><input type="radio" name="color" value="rojo"> Rojo</label>
+                    <label><input type="radio" name="color" value="rojo"> Blanco</label>
                     <label><input type="radio" name="color" value="azul"> Azul</label>
-                    <!-- Agrega más colores según sea necesario -->
+                    <label><input type="radio" name="color" value="azul"> Negro</label>
                     <h3>Si deseas comprar, click Debajo</h3>
                 </div>
-                <button class="boton-interesado" onclick="abrirWhatsApp()">Estoy Interesado</button>
+                <button class="seleccion-compra">Metodos de Compra</button>
+                <div class="panel">
+                    <p>Si te gustaria comprar el producto, selecciona uno de los siguientes metodos.</p>
+                    <button class="boton-whatsapp" onclick="abrirWhatsApp()">WhatsApp</button>
+                    <button class="boton-tarjeta" onclick="">Tarjeta de Credito</button>
+                    <button class="boton-transferencia" onclick="">Transferencia</button>
+                </div> 
             </div>
             <div class="imagen-articulo">
                 <img id="imagen-articulo" src="" alt="Artículo">
@@ -77,54 +85,54 @@
         // Función para cargar la información del producto seleccionado
         function cargarProductoSeleccionado() {
             var producto = getParameterByName('producto');
-            // Aquí deberías tener lógica para cargar los datos del producto según el parámetro recibido
+            // HACER DINAMICAMENTE, ESTO ESTA FEO
             if (producto === 'buzo1') {
                 document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Azul";
-                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios.";
+                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $22.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf1.jpg";
             } else if (producto === 'buzo2') {
-                document.getElementById("nombre-articulo").textContent = "Buzo 2";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Buzo 2...";
+                document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Blanco";
+                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $22.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf2.jpg";
             } else if (producto === 'buzo3') {
-                document.getElementById("nombre-articulo").textContent = "Buzo 3";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Buzo 3...";
+                document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Negro";
+                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $22.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf3.jpg";
             } else if (producto === 'buzo4') {
-                document.getElementById("nombre-articulo").textContent = "Buzo 4";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Buzo 4...";
+                document.getElementById("nombre-articulo").textContent = "Buzo Termico Fino Wolf Negro";
+                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $18.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf4.jpg";
             } else if (producto === 'buzo5') {
-                document.getElementById("nombre-articulo").textContent = "Buzo 5";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Buzo 5...";
+                document.getElementById("nombre-articulo").textContent = "Buzo Termico Fino Wolf Gris";
+                document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $18.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf5.jpg";
             } else if (producto === 'remera1') {
-                document.getElementById("nombre-articulo").textContent = "Remera 1";
-                document.getElementById("descripcion-articulo").textContent = "Descripción de la Remera 1...";
+                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf Azul";
+                document.getElementById("descripcion-articulo").textContent = "Con esta remera te va a ir bien en todos los partidos. Precio: $10.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Remeras/rdf1.jpg";
             } else if (producto === 'remera2') {
-                document.getElementById("nombre-articulo").textContent = "Remera 2";
-                document.getElementById("descripcion-articulo").textContent = "Descripción de la Remera 2...";
+                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf Blanco";
+                document.getElementById("descripcion-articulo").textContent = "Con esta remera te va a ir bien en todos los partidos. Precio: $10.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Remeras/rdf2.jpg";
             } else if (producto === 'remera3') {
-                document.getElementById("nombre-articulo").textContent = "Remera 3";
-                document.getElementById("descripcion-articulo").textContent = "Descripción de la Remera 3...";
+                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf Negro";
+                document.getElementById("descripcion-articulo").textContent = "Con esta remera te va a ir bien en todos los partidos. Precio: $10.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Remeras/rdf3.jpg";
             } else if (producto === 'short1') {
-                document.getElementById("nombre-articulo").textContent = "Short 1";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Short 1...";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Azul";
+                document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s1.jpg";
             } else if (producto === 'short2') {
-                document.getElementById("nombre-articulo").textContent = "Short 2";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Short 2...";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Blanco";
+                document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s2.jpg";
             } else if (producto === 'short3') {
-                document.getElementById("nombre-articulo").textContent = "Short 3";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Short 3...";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Bordo";
+                document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s3.jpg";
             } else if (producto === 'short4') {
-                document.getElementById("nombre-articulo").textContent = "Short 4";
-                document.getElementById("descripcion-articulo").textContent = "Descripción del Short 4...";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Negro";
+                document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s4.jpg";
             }
         }
@@ -139,12 +147,25 @@
             cargarProductoSeleccionado();
         };
         function seleccionarTalla(elemento) {
-            var tallas = document.querySelectorAll('.talla1, .talla2, .talla3');
+            var tallas = document.querySelectorAll('.talla1, .talla2, .talla3, .talla4, .talla5, .talla6, .talla7');
             tallas.forEach(function(talla) {
                 talla.classList.remove('selected');
             });
             elemento.classList.add('selected');
         }
+        var acc = document.getElementsByClassName("seleccion-compra");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+  });
+}
     </script>
 </body>
 </html>

@@ -23,7 +23,10 @@
 /*Textos Generales*/
 a{
     text-decoration: none;
-    color: white;   
+    color: white;
+}
+h1{
+    font-size: 25px;
 }
 strong{
     color: rgb(255, 255, 255);
@@ -34,6 +37,7 @@ strong{
 /*body y header general*/
 body{
     background-color: aliceblue;
+    position: relative;
 }
 header{
     width: 100%;
@@ -41,20 +45,25 @@ header{
     color: white;
     padding: 10px 0;
     opacity: 0.9;
+    z-index: 1000;
+    position: relative;
 }
 /*Barra general*/
 .barra{
     width: 80%;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .barra .logo{
     display: flex;
     align-items: center;
-    float: left;
 }
 .barra .menu{
+    display: flex;
     align-items: center;
-    margin-right: auto;
+    float: right;
 }
 .barra img{
     max-width: 100px;
@@ -70,9 +79,10 @@ header{
 }
 .desktop-nav ul li{
     position: relative;
-    margin-right: 200px;
+    margin-right: 20px;
 }
 .desktop-nav ul li a{
+    font-size: 20px;
     color: white;
     text-decoration: none;
     transition: color 0.3s;
@@ -118,37 +128,24 @@ footer{
     text-align: center;
     padding: 10px 0;
     opacity: 0.9;
+    justify-content: center;
+    display: grid;
+}
+footer img{
+    margin-top: 5px;
+    width: 500px;
+}
+footer .contactos{
+    display: inline-block;
 }
 /*Contenedor-main*/
-.contenedor-main{
-    font-size: 45px;
-    background-color: #af1f1f;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Sombra de texto */
-    color: #ffffff; /* Color del texto */
-    background-image: url(Images/images-wolf/nosotros.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: auto;
-    height: 650px;
-    
-}
-.contenedor-main img{
-    max-width: 615px;
-}
-.separacion-2{
-    font-size: 25px;
-    background-color: #581b1b;
-    color: #ffffff; /* Color del texto */
-}
-
 /*MAIN DE PAGINA INICIAL (WOLF)*/
 /*Carrousel de imagenes.*/
 .carrousel-wolf{
-    width: 1000px;
-    height: auto;
+    width: 1200px;
     margin: 50px auto 0;
     overflow: hidden;
+    z-index: 1;
 }
 .carrousel-wolf ul{
     display: flex;
@@ -163,18 +160,6 @@ footer{
 }
 .carrousel-wolf img{
     width: 100%;
-}
-.ver-mas{
-    color: rgb(80, 61, 11);
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    counter-reset: #333;
-    text-decoration: none;
-    font-size: 18px;
-}
-.ver-mas:hover{
-    color: #555;
 }
 @keyframes slide-desktop {
     0% {transform: translateX(0);}
@@ -191,57 +176,38 @@ footer{
 }
 /*FIN Carrousel de imagenes.*/
 /*Imagenes pasables de abajo.*/
-.contenedores-imagenes {
+.deslizador {
+    background-color: #dbdbdb;
     justify-content: center;
     display: flex;
     gap: 80px;
+    height: 600px;
+    padding: 30px;
+
 }
-.cuadro-imagen{
+.shorts-deslizado, .buzos-deslizado, .buzos-termicos-deslizado{
     position: relative;
     width: 350px;
     height: 350px;
-    overflow: hidden;
+    align-items: center;
 }
 .deslizado1 img {
-    width: 100%;
+    width: 250px;
     height: 100%;
 }
 .deslizado2 img {
-    width: 100%;
+    width: 250px;
     height: 100%;
 }
 .deslizado3 img {
-    width: 100%;
+    width: 250px;
     height: 100%;
 }
-.prev1, .next1, .prev2, .next2 ,.prev3, .next3 {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-  }
-  .next1, .next2, .next3 {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  .prev1:hover, .next1:hover,.prev2:hover, .next2:hover,.prev3:hover, .next3:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  .numbertext {
-    color: #000000;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  .text {
+.deslizado4 img {
+    width: 250px;
+    height: 100%;
+}
+.text{
     color: #d1c5c5;
     font-size: 15px;
     padding: 8px 12px;
@@ -249,7 +215,65 @@ footer{
     bottom: 8px;
     width: 100%;
     text-align: center;
+}
+.dot, .dot-2, .dot-3, .dot-4, .dot-5, .dot-6, .dot-7, .dot-8, .dot-9{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #313a8f;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot{
+    background-color: rgb(30, 30, 141);
+}
+.dot-2, .dot-6{
+    background-color: rgb(255, 255, 255);
+}
+.dot-3{
+    background-color: #6b201d;
+}
+.dot-4, .dot-7, .dot-8{
+    background-color: #000000;
+}
+.dot-9{
+    background-color: #717171;
+}
+.active, .dot:hover {
+    background-color: #717171;
   }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .boton-compra{
+    background-color: #5c615d; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 10px 2px; /* Margen alrededor */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s;
+}
+.boton-compra:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Agrandar un poco al pasar el ratón */
+}
 /*FIN Imagenes pasables de abajo.*/
 /*ESTO ES ARTICULOS.*/
 /*Botones de filtro y grupos de imagenes.*/
@@ -306,13 +330,21 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    font-size: 45px;
+    font-size: 25px;
+}
+.articulo-seleccionado p{
+
+}
+.articulo-seleccionado h3{
+    margin-top: 40px;
 }
 .detalle-articulo {
     flex: 1;
     padding: 90px;
+    font-size: 20;
 }
 .imagen-articulo {
+    padding: 25px;
     flex: 1;
     display: flex;
     justify-content: center;

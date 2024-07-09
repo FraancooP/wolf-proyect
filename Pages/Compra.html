@@ -11,31 +11,34 @@
 <body>
     <header>
         <div class="barra">
-            <h1><a href="../Wolf.html">Wolf</a></h1>
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#articulos">Articulos</a>
-                        <ul class="submenu">
-                            <li><a href="../Pages/Articulos.html">Ver Articulos</a></li>
-                            <li><a href="../Pages/Buscar.html">Buscar Articulo</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#servicios">Servicios</a>
-                        <ul class="submenu">
-                            <li><a href="../Pages/Contactar.html">Contactarnos</a></li>
-                            <li><a href="../Pages/Reclamos.html">Realizar Reclamo</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#nosotros">Nosotros</a>
-                        <ul class="submenu">
-                            <li><a href="../Pages/Nosotros.html">¿Quienes somos?</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="mobile-nav"></nav>
+            <div class="logo">
+                <img src="../Images/images-wolf/fondo-11.png" alt="">
+                <h1><a href="../Wolf.html">WOLF</a></h1>
+            </div>
+            <div class="menu">
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#articulos">Articulos</a>
+                            <ul class="submenu">
+                                <li><a href="../Pages/Articulos.html">Ver Articulos</a></li>
+                                <li><a href="../Pages/Buscar.html">Buscar Articulo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#servicios">Servicios</a>
+                            <ul class="submenu">
+                                <li><a href="../Pages/Contactar.html">Contactarnos</a></li>
+                                <li><a href="../Pages/Reclamos.html">Realizar Reclamo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#nosotros">Nosotros</a>
+                            <ul class="submenu">
+                                <li><a href="../Pages/Nosotros.html">¿Quienes somos?</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <!-- Tu encabezado aquí -->
     </header>
     <main>
         <div class="articulo-seleccionado">
@@ -50,10 +53,6 @@
                     <div class="talla5" onclick="seleccionarTalla(this)">X</div>
                     <div class="talla6" onclick="seleccionarTalla(this)">XL</div>
                     <div class="talla7" onclick="seleccionarTalla(this)">XXL</div>
-                    <h3>Colores Disponibles</h3>
-                    <label><input type="radio" name="color" value="rojo"> Blanco</label>
-                    <label><input type="radio" name="color" value="azul"> Azul</label>
-                    <label><input type="radio" name="color" value="azul"> Negro</label>
                     <h3>Si deseas comprar, click Debajo</h3>
                 </div>
                 <button class="seleccion-compra">Metodos de Compra</button>
@@ -87,51 +86,51 @@
             var producto = getParameterByName('producto');
             // HACER DINAMICAMENTE, ESTO ESTA FEO
             if (producto === 'buzo1') {
-                document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Azul";
+                document.getElementById("nombre-articulo").textContent = "Buzo frizado Wolf azul";
                 document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $22.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf1.jpg";
             } else if (producto === 'buzo2') {
-                document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Blanco";
+                document.getElementById("nombre-articulo").textContent = "Buzo frizado Wolf blanco";
                 document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $22.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf2.jpg";
             } else if (producto === 'buzo3') {
-                document.getElementById("nombre-articulo").textContent = "Buzo Frizado Wolf Negro";
+                document.getElementById("nombre-articulo").textContent = "Buzo frizado Wolf negro";
                 document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $22.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf3.jpg";
             } else if (producto === 'buzo4') {
-                document.getElementById("nombre-articulo").textContent = "Buzo Termico Fino Wolf Negro";
+                document.getElementById("nombre-articulo").textContent = "Buzo térmico fino Wolf negro";
                 document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $18.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf4.jpg";
             } else if (producto === 'buzo5') {
-                document.getElementById("nombre-articulo").textContent = "Buzo Termico Fino Wolf Gris";
+                document.getElementById("nombre-articulo").textContent = "Buzo térmico fino Wolf gris";
                 document.getElementById("descripcion-articulo").textContent = "Buzo diseñado para entrenamientos en ambientes frios. Precio: $18.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Buzos/bf5.jpg";
             } else if (producto === 'remera1') {
-                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf Azul";
+                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf azul";
                 document.getElementById("descripcion-articulo").textContent = "Con esta remera te va a ir bien en todos los partidos. Precio: $10.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Remeras/rdf1.jpg";
             } else if (producto === 'remera2') {
-                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf Blanco";
+                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf blanco";
                 document.getElementById("descripcion-articulo").textContent = "Con esta remera te va a ir bien en todos los partidos. Precio: $10.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Remeras/rdf2.jpg";
             } else if (producto === 'remera3') {
-                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf Negro";
+                document.getElementById("nombre-articulo").textContent = "Remera Dry-fit Wolf negro";
                 document.getElementById("descripcion-articulo").textContent = "Con esta remera te va a ir bien en todos los partidos. Precio: $10.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Remeras/rdf3.jpg";
             } else if (producto === 'short1') {
-                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Azul";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf azul";
                 document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s1.jpg";
             } else if (producto === 'short2') {
-                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Blanco";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf blanco";
                 document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s2.jpg";
             } else if (producto === 'short3') {
-                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Bordo";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf bordo";
                 document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s3.jpg";
             } else if (producto === 'short4') {
-                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf Negro";
+                document.getElementById("nombre-articulo").textContent = "Short frizado Wolf negro";
                 document.getElementById("descripcion-articulo").textContent = "No se te van a helar los huevos. Precio: $11.000 ARS";
                 document.getElementById("imagen-articulo").src = "../Images/articulos/Shorts/s4.jpg";
             }

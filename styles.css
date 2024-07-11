@@ -41,7 +41,7 @@ body{
 }
 header{
     width: 100%;
-    background-color: #333;
+    background-color: #000000;
     color: white;
     padding: 10px 0;
     opacity: 0.9;
@@ -119,11 +119,10 @@ header{
 main{
     width: 100%;
     padding: 0;
-
 }
 /*Fin de pagina*/
 footer{
-    background-color: #333;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -140,9 +139,18 @@ footer .contactos{
 }
 /*Contenedor-main*/
 /*MAIN DE PAGINA INICIAL (WOLF)*/
+.contenedor-inicio{
+    width: 100%;
+    background-image: url(Images/images-wolf/inicio.jpg);
+}
+.contenedor-inicio img{
+    display:block ;
+    width: 100%;
+    height: auto;
+}
 /*Carrousel de imagenes.*/
 .carrousel-wolf{
-    width: 1200px;
+    width: 1000px;
     margin: 50px auto 0;
     overflow: hidden;
     z-index: 1;
